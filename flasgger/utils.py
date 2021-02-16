@@ -139,6 +139,8 @@ def get_specs(rules, ignore_verbs, optional_fields, sanitizer, doc_dir=None):
             if doc_dir:
                 print('Flasgger', doc_dir)
                 if view_class:
+                    print(endpoint.__dict__)
+                    print(type(endpoint))
                     file_path = os.path.join(
                         doc_dir, endpoint.__name__, method.__name__ + '.yml')
                 else:
